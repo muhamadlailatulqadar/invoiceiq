@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/InvoiceIQ.Api/InvoiceIQ.Api.csproj" />
+    <Project Path="src/InvoiceIQ.Application/InvoiceIQ.Application.csproj" />
+    <Project Path="src/InvoiceIQ.Domain/InvoiceIQ.Domain.csproj" />
+    <Project Path="src/InvoiceIQ.Infrastructure/InvoiceIQ.Infrastructure.csproj" />
+  </Folder>
+</Solution>
