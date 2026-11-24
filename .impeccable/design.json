@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-24T00:00:00Z",
+  "title": "Design System: InvoiceIQ",
+  "extensions": {
+    "colorMeta": {
+      "bg": {
+        "role": "neutral",
+        "displayName": "Warm Parchment",
+        "canonical": "#fff8ee",
+        "darkTheme": "#1c0610",
+        "tonalRamp": ["#3a2010", "#5a3820", "#7a5030", "#9a6a48", "#ba8868", "#d4aa90", "#eacfb8", "#fff8ee"]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "White",
+        "canonical": "#ffffff",
+        "darkTheme": "#2a0b19",
+        "tonalRamp": ["#2b2b2b", "#484848", "#686868", "#888888", "#aaaaaa", "#cccccc", "#e8e8e8", "#ffffff"]
+      },
+      "surface-soft": {
+        "role": "neutral",
+        "displayName": "Peach Tint",
+        "canonical": "#ffedd5",
+        "darkTheme": "#3a1225",
+        "tonalRamp": ["#3a2808", "#5c4010", "#7c5820", "#a07038", "#c08858", "#daa880", "#f0cca8", "#ffedd5"]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Warm Tan",
+        "canonical": "#ead7c0",
+        "darkTheme": "#4a1a30",
+        "tonalRamp": ["#2e2010", "#503820", "#704e32", "#906848", "#b08462", "#c8a080", "#dcc0a0", "#ead7c0"]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Near-Black Plum",
+        "canonical": "#2b0a17",
+        "darkTheme": "#ffedd5",
+        "tonalRamp": ["#160408", "#2b0a17", "#481428", "#6b2040", "#8e3858", "#b46880", "#d4a0b0", "#f8e8ee"]
+      },
+      "text-muted": {
+        "role": "neutral",
+        "displayName": "Muted Mauve",
+        "canonical": "#6b5560",
+        "darkTheme": "#b5bedd",
+        "tonalRamp": ["#1e1218", "#382030", "#502e48", "#6b5560", "#8a7080", "#a89098", "#c8b4bc", "#f0e8ec"]
+      },
+      "brand": {
+        "role": "primary",
+        "displayName": "Ink Plum",
+        "canonical": "#470b24",
+        "darkTheme": "#b5bedd",
+        "tonalRamp": ["#1a0310", "#2f0617", "#470b24", "#6a1538", "#8e2550", "#b4587a", "#d496b0", "#f5dce8"]
+      },
+      "brand-soft": {
+        "role": "primary",
+        "displayName": "Clouded Periwinkle",
+        "canonical": "#b5bedd",
+        "darkTheme": "#5a2a40",
+        "note": "Light-theme --brand-soft: soft periwinkle tint for subtle fills. In dark theme, --brand takes this value (#b5bedd) and --brand-soft becomes #5a2a40 (Deep Plum Mist).",
+        "tonalRamp": ["#1a2240", "#253360", "#3a5080", "#5570a8", "#7a93c8", "#b5bedd", "#d4dbee", "#eef1f8"]
+      },
+      "positive": {
+        "role": "semantic-positive",
+        "displayName": "Forest Green",
+        "canonical": "#1e7a46",
+        "darkTheme": "#4ade80",
+        "tonalRamp": ["#0a2e1a", "#0f4624", "#165f30", "#1e7a46", "#2f9d5c", "#51bc7b", "#85d9a3", "#c4f0d4"]
+      },
+      "negative": {
+        "role": "semantic-negative",
+        "displayName": "Deep Red",
+        "canonical": "#b42318",
+        "darkTheme": "#f87171",
+        "tonalRamp": ["#330a07", "#550f0a", "#7a1510", "#b42318", "#d64030", "#e87060", "#f0a898", "#f8d8d4"]
+      },
+      "warning": {
+        "role": "semantic-warning",
+        "displayName": "Amber",
+        "canonical": "#b45309",
+        "darkTheme": "#fbbf24",
+        "tonalRamp": ["#3a2004", "#5c3406", "#7c4808", "#b45309", "#d4760e", "#e8a04a", "#f0c888", "#faeacc"]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Page titles and major section headers. Set in Ink Plum, used once per screen."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All prose, labels, and UI copy. The default for everything that is not a number or a header."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Form labels, table column headers, chip text, and status badge copy."
+      },
+      "mono": {
+        "displayName": "Mono (Numbers)",
+        "purpose": "Invoice amounts, totals, IDs, dates used as sort keys. Always paired with tabular-nums."
+      }
+    },
+    "shadows": [
+      {
+        "name": "shadow-float",
+        "value": "RESERVED — not yet implemented",
+        "purpose": "To be defined when the first floating layer (dropdown, dialog, toast) is built. Must be diffuse, low-opacity, single-direction. Add as --shadow-float in _tokens.scss with both light and dark values."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-standard",
+        "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Default easing for state transitions (hover, focus). Duration: 150ms for colour/opacity, 200ms for layout."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "desktop",
+        "value": "960px",
+        "purpose": "Single container max-width. No responsive breakpoints defined yet; product is desktop-first."
+      }
+    ],
+    "darkTheme": {
+      "note": "Dark theme is implemented via @media (prefers-color-scheme: dark) in _tokens.scss. All --bg, --surface, --surface-soft, --border, --text, --text-muted, --brand, --brand-soft, --positive, --negative, --warning values invert. See _tokens.scss for exact dark values."
+    }
+  },
+  "components": [
+    {
+      "name": "Status Badge",
+      "kind": "chip",
+      "refersTo": "status-pill",
+      "description": "Inline validation status indicator. Pairs a colour dot with a text label — colour is never the sole signal.",
+      "html": "<p class=\"ds-status ds-status--up\">API online</p>",
+      "css": ".ds-status { display: inline-flex; align-items: center; gap: 8px; margin: 0; padding: 4px 12px; border: 1px solid #ead7c0; border-radius: 999px; background: #ffffff; color: #6b5560; font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 0.875rem; line-height: 1.5; } .ds-status::before { content: ''; flex-shrink: 0; width: 8px; height: 8px; border-radius: 50%; background: #6b5560; } .ds-status--up::before { background: #1e7a46; } .ds-status--down::before { background: #b42318; } .ds-status--warning::before { background: #b45309; }"
+    },
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The primary action trigger. Ink Plum background, used sparingly — one per screen section.",
+      "html": "<button class=\"ds-btn-primary\">Approve Invoice</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: #470b24; color: #ffffff; font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 0.875rem; font-weight: 600; line-height: 1.5; border: none; border-radius: 6px; cursor: pointer; transition: outline-offset 0.1s; } .ds-btn-primary:focus-visible { outline: 2px solid #470b24; outline-offset: 2px; } .ds-btn-primary:active { opacity: 0.85; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Lower-emphasis action. White surface, Ink Plum text, 1px border stroke.",
+      "html": "<button class=\"ds-btn-secondary\">View Details</button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: #ffffff; color: #470b24; font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 0.875rem; font-weight: 600; line-height: 1.5; border: 1px solid #ead7c0; border-radius: 6px; cursor: pointer; transition: border-color 0.15s, background 0.15s; } .ds-btn-secondary:hover { border-color: #470b24; background: #fff8ee; } .ds-btn-secondary:focus-visible { outline: 2px solid #470b24; outline-offset: 2px; } .ds-btn-secondary:active { background: #ffedd5; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input-text",
+      "description": "Standard form input. Warm tan border, Ink Plum focus ring.",
+      "html": "<div class=\"ds-field\"><label class=\"ds-field__label\">Supplier</label><input class=\"ds-input\" type=\"text\" placeholder=\"Enter supplier name\" /></div>",
+      "css": ".ds-field { display: flex; flex-direction: column; gap: 4px; } .ds-field__label { font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 0.875rem; font-weight: 400; color: #2b0a17; line-height: 1.5; } .ds-input { padding: 8px 12px; background: #ffffff; color: #2b0a17; font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 15px; line-height: 1.5; border: 1px solid #ead7c0; border-radius: 6px; outline: none; width: 100%; transition: border-color 0.15s; } .ds-input:focus { border-color: #470b24; } .ds-input:focus-visible { border-color: #470b24; outline: 2px solid #470b24; outline-offset: -1px; } .ds-input::placeholder { color: #6b5560; }"
+    },
+    {
+      "name": "Amount Display",
+      "kind": "custom",
+      "refersTo": "amount",
+      "description": "Tabular monetary value. IBM Plex Mono ensures column alignment. Used for all invoice amounts, totals, and subtotals.",
+      "html": "<span class=\"ds-amount\">$12,345.00</span>",
+      "css": ".ds-amount { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; font-size: 15px; line-height: 1.5; color: #2b0a17; }"
+    },
+    {
+      "name": "Table Row (hover state)",
+      "kind": "custom",
+      "refersTo": "table-row",
+      "description": "Invoice list row. Peach Tint hover — no shadow, no border shift. The primary data display surface.",
+      "html": "<tr class=\"ds-row\"><td class=\"ds-cell\">INV-2024-001</td><td class=\"ds-cell\">Acme Supplies</td><td class=\"ds-cell ds-cell--amount\">$4,200.00</td><td class=\"ds-cell\"><span class=\"ds-status ds-status--up\">Approved</span></td></tr>",
+      "css": ".ds-row { background: #ffffff; border-bottom: 1px solid #ead7c0; transition: background 0.1s; } .ds-row:hover { background: #ffedd5; } .ds-cell { padding: 12px 16px; font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 15px; color: #2b0a17; vertical-align: middle; } .ds-cell--amount { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; text-align: right; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Examined Ledger",
+    "overview": "InvoiceIQ is built on the conviction that every figure deserves scrutiny before it moves. The design system embodies that conviction: unhurried, typographic, and precise. Where most finance tools reach for cold blue authority, this system uses warm parchment and deep plum — the palette of ink on paper, of an auditor working methodically through a stack. Nothing is decorative. Every colour, weight, and spacing decision earns its place by clarifying a number or a decision.\n\nThe interface operates at high density without noise. IBM Plex Sans supplies legibility at the 15px base; IBM Plex Mono makes monetary values and codes tabular, scannable, and unambiguous at a glance. The two faces work as a pair: the sans for context, the mono for fact. Status communicates through text labels and shape, never through colour alone — a rule that holds in both light and dark.",
+    "keyCharacteristics": [
+      "Warm, parchment-grounded palette — not cold blue or sterile white",
+      "Ink Plum brand accent used sparingly — titles, primary actions, active navigation only",
+      "IBM Plex Sans + IBM Plex Mono as a committed typographic pair",
+      "Flat-tonal depth: background tiers and 1px borders, no shadows on static elements",
+      "Status communicated by text + icon shape, never colour alone",
+      "Single global radius (6px) with pill only for status badges"
+    ],
+    "rules": [
+      {
+        "name": "The One Voice Rule",
+        "body": "Ink Plum (--brand) is the only accent. It never signals validation status — that job belongs to Forest Green, Deep Red, and Amber exclusively. If a colour is doing two jobs, one of them is wrong.",
+        "section": "colors"
+      },
+      {
+        "name": "The Never-Colour-Alone Rule",
+        "body": "No validation state is communicated by colour alone. Every status badge pairs a colour dot with a text label. This holds in both themes and in print.",
+        "section": "colors"
+      },
+      {
+        "name": "The Mono-For-Facts Rule",
+        "body": "Any value that will be compared, summed, or scanned in a column uses IBM Plex Mono with tabular-nums. A proportional-width amount in an amount column is a typographic error.",
+        "section": "typography"
+      },
+      {
+        "name": "The Floor-and-Border Rule",
+        "body": "Depth comes from background colour and border lines, not from shadows. A card is white on parchment with a tan border. That is sufficient and intentional. Shadows on cards are a regression, not an enhancement.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use IBM Plex Mono with font-variant-numeric: tabular-nums for every monetary value, invoice ID, and date used as a sort key.",
+      "Do pair every status colour with a text label or labelled icon — colour alone never carries meaning.",
+      "Do use Ink Plum (--brand) only on primary actions, page titles, and active navigation — keep it rare so it retains authority.",
+      "Do express depth through the bg → surface → surface-soft tier progression and 1px --border lines.",
+      "Do apply WCAG 2.1 AA contrast (4.5:1 minimum) in both light and dark themes before shipping any new colour assignment."
+    ],
+    "donts": [
+      "Don't use gradients, drop-shadows, or blurs on cards, table rows, buttons, or static containers.",
+      "Don't use --brand to signal a validation status — Ink Plum is brand authority, not an outcome indicator.",
+      "Don't introduce a new colour outside the token file. If a semantic need arises, add a token to _tokens.scss with both light and dark values.",
+      "Don't let a numeric column go without tabular-nums — misaligned amounts in an invoice table are a trust failure."
+    ]
+  }
+}

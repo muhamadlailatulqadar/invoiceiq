@@ -1,0 +1,52 @@
+// Design tokens: every colour, font and spacing value InvoiceIQ uses.
+// Components use var(--name), never a raw hex code.
+
+:root {
+  color-scheme: light;
+
+  // Colours (light theme)
+  --bg: #fff8ee;
+  --surface: #ffffff;
+  --surface-soft: #ffedd5;
+  --border: #ead7c0;
+  --text: #2b0a17;
+  --text-muted: #6b5560;
+  --brand: #470b24;
+  --brand-soft: #b5bedd;
+  --positive: #1e7a46;
+  --negative: #b42318;
+  --warning: #b45309;
+
+  // Fonts
+  --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  // Spacing (multiples of 4px)
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  // Shape
+  --radius: 6px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --bg: #1c0610;
+    --surface: #2a0b19;
+    --surface-soft: #3a1225;
+    --border: #4a1a30;
+    --text: #ffedd5;
+    --text-muted: #b5bedd;
+    --brand: #b5bedd;
+    --brand-soft: #5a2a40;
+    --positive: #4ade80;
+    --negative: #f87171;
+    --warning: #fbbf24;
+  }
+}

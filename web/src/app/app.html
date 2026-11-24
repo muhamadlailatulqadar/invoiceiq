@@ -1,11 +1,12 @@
-<main>
-  <h1>InvoiceIQ</h1>
+<main class="page">
+  <h1 class="page__title">InvoiceIQ</h1>
+
   @if (apiHealth.isLoading()) {
-    <p>Checking the API…</p>
+    <p class="status">Checking the API…</p>
   } @else if (apiHealth.error()) {
-    <p>API: offline</p>
+    <p class="status status--down">API offline</p>
   } @else {
-    <p>API: {{ apiHealth.value() }}</p>
+    <p class="status status--up">API {{ apiHealth.value() }}</p>
   }
 </main>
 <router-outlet />
